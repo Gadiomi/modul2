@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Додаток калькулятора</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>Спортивний калькулятор</h1>
+    <form id="calculatorForm">
+      <label for="age">Вік:</label>
+      <input type="number" id="age" name="age" required />
+
+      <label for="gender">Стать:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Чоловік</option>
+        <option value="female">Жінка</option>
+      </select>
+      <label for="height">Зріст (см):</label>
+      <input type="number" id="height" name="height" required />
+      <label for="weight">Вага (кг):</label>
+      <input type="number" id="weight" name="weight" required />
+      <label for="goal">Ціль:</label>
+      <select id="goal" name="goal" required>
+        <option value="loseWeight0.5">Схуднути на 0.5 кг/тиждень</option>
+        <option value="loseWeight1">Схуднути на 1 кг/тиждень</option>
+        <option value="loseWeight2">Схуднути на 2 кг/тиждень</option>
+        <option value="gainWeight0.5">Набрати вагу на 0.5 кг/тиждень</option>
+        <option value="gainWeight1">Набрати вагу на 1 кг/тиждень</option>
+        <option value="gainWeight2">Набрати вагу на 2 кг/тиждень</option>
+      </select>
+
+      <button type="button" onclick="calculate()">Обчислити</button>
+    </form>
+
+    <h2>Результати обчислень</h2>
+    <table id="resultTable" border="1">
+      <tr>
+        <th>Вік</th>
+        <th>Стать</th>
+        <th>Зріст (см)</th>
+        <th>Вага (кг)</th>
+        <th>Ціль</th>
+      </tr>
+    </table>
+
+    <canvas id="chartContainer" width="400" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+  </body>
+</html>
